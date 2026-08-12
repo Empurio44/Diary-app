@@ -1,0 +1,64 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.habitCard {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 180px;
+  flex: 1;
+}
+
+.emoji {
+  font-size: 24px;
+}
+
+.name {
+  font-size: 15px;
+  font-weight: 650;
+}
+
+.streak {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+.heatmapWrap {
+  flex: 0 0 220px;
+}
+
+.toggle {
+  flex-shrink: 0;
+}
+
+.addCard {
+  border-style: dashed;
+}
+
+.addForm {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.emojiInput {
+  width: 56px;
+  flex: none;
+  text-align: center;
+}
+
+.nameInput {
+  flex: 1;
+  min-width: 160px;
+}

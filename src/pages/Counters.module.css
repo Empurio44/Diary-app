@@ -1,0 +1,62 @@
+.grid {
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}
+
+.counterCard {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.emoji {
+  font-size: 22px;
+}
+
+.name {
+  font-size: 14px;
+  font-weight: 650;
+  color: var(--text-secondary);
+}
+
+.count {
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.addCard {
+  border-style: dashed;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+}
+
+.addForm {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.addRow {
+  display: flex;
+  gap: 8px;
+}
+
+.emojiInput {
+  width: 56px;
+  flex: none;
+  text-align: center;
+}

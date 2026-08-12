@@ -1,0 +1,51 @@
+.grid {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.metricCard {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.metricHead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.metricName {
+  font-size: 15px;
+  font-weight: 650;
+}
+
+.metricLatest {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.metricLatestValue {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.addSection {
+  margin-top: 28px;
+}
+
+.addForm {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.select {
+  flex: 1;
+  min-width: 140px;
+}
+
+.valueInput {
+  width: 120px;
+  flex: none;
+}

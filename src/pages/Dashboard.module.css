@@ -1,0 +1,65 @@
+.tiles {
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  margin-bottom: 24px;
+}
+
+.sections {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.sectionCard {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.sectionHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.link {
+  font-size: 13px;
+  font-weight: 650;
+  color: var(--series-1);
+  text-decoration: none;
+}
+
+.habitRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.habitName {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.habitStreak {
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+.counterRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.counterName {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.counterValue {
+  font-weight: 700;
+  font-size: 16px;
+}

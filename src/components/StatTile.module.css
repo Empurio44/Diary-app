@@ -1,0 +1,45 @@
+.tile {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-size: 13px;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.value {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.unit {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-left: 4px;
+}
+
+.delta {
+  font-size: 13px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.deltaGood {
+  color: var(--success-text);
+}
+
+.deltaBad {
+  color: var(--status-critical);
+}
+
+.deltaNeutral {
+  color: var(--text-muted);
+}

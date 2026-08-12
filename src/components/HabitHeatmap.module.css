@@ -1,0 +1,17 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(14, 1fr);
+  gap: 3px;
+  max-width: 260px;
+}
+
+.cell {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 3px;
+  background: var(--gridline);
+}
+
+.cellToday {
+  box-shadow: 0 0 0 1.5px var(--text-primary);
+}
