@@ -1,0 +1,21 @@
+.pike {
+  position: fixed;
+  right: 20px;
+  bottom: 16px;
+  width: 220px;
+  max-width: 38vw;
+  height: auto;
+  pointer-events: none;
+  z-index: 5;
+  opacity: 0.95;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.18));
+}
+
+@media (max-width: 860px) {
+  .pike {
+    width: 150px;
+    right: 10px;
+    /* clear the bottom tab bar */
+    bottom: calc(78px + env(safe-area-inset-bottom));
+  }
+}

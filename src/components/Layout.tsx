@@ -1,4 +1,5 @@
 import { NavLink, Outlet } from "react-router-dom";
+import PikeCorner from "./PikeCorner";
 import styles from "./Layout.module.css";
 
 const NAV_ITEMS = [
@@ -54,6 +55,8 @@ export default function Layout() {
           </NavLink>
         ))}
       </nav>
+
+      <PikeCorner />
     </div>
   );
 }
