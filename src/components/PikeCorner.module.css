@@ -1,21 +1,93 @@
-.pike {
+.root {
   position: fixed;
-  right: 20px;
-  bottom: 16px;
+  left: 0;
+  top: 0;
+  z-index: 5;
+  /* the wrapper never swallows clicks; only the painted fish does */
+  pointer-events: none;
+  will-change: transform;
+  transition: transform var(--travel, 0ms) cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.facing {
+  transition: transform 260ms ease;
+}
+
+.facingRight {
+  transform: scaleX(-1);
+}
+
+.pike {
+  display: block;
   width: 220px;
   max-width: 38vw;
   height: auto;
-  pointer-events: none;
-  z-index: 5;
-  opacity: 0.95;
   filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.18));
+}
+
+/* only the painted fish is tappable */
+.hit {
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+/* --- lower jaw --- */
+.jaw {
+  transform-box: view-box;
+  transform-origin: 56px 61px;
+  transition: transform 200ms ease;
+}
+
+.jawOpen {
+  transform: rotate(-19deg);
+}
+
+/* --- motion states --- */
+@keyframes pikeDance {
+  0% {
+    transform: rotate(0deg) translateY(0);
+  }
+  20% {
+    transform: rotate(-10deg) translateY(-7px);
+  }
+  45% {
+    transform: rotate(8deg) translateY(3px);
+  }
+  70% {
+    transform: rotate(-7deg) translateY(-5px);
+  }
+  100% {
+    transform: rotate(0deg) translateY(0);
+  }
+}
+
+@keyframes pikeSwim {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-7px) rotate(-3deg);
+  }
+}
+
+.dancing {
+  animation: pikeDance 620ms ease-in-out infinite;
+}
+
+.swimming {
+  animation: pikeSwim 2.2s ease-in-out infinite;
 }
 
 @media (max-width: 860px) {
   .pike {
     width: 150px;
-    right: 10px;
-    /* clear the bottom tab bar */
-    bottom: calc(78px + env(safe-area-inset-bottom));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dancing,
+  .swimming {
+    animation: none;
   }
 }
